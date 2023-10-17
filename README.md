@@ -5,9 +5,9 @@ The project uses
 
 | Technologies | Links |
 | ---- | ---- |
-| ![git_Flask](https://github.com/pandenic/yacut/assets/114985447/7a765dbb-e153-4217-870f-021598f23ed2) | [Flask](https://flask.palletsprojects.com/en/3.0.x/) |
-| ![git_SQLAlchemy](https://github.com/pandenic/yacut/assets/114985447/a4565405-11d9-4a0c-941c-dc62a640a373) | [SQLAlchemy](https://www.sqlalchemy.org/) |
-| ![git_SQLite](https://github.com/pandenic/yacut/assets/114985447/2d543d16-08f0-4f33-a2f5-9b6c5459ad54) | [SQLite](https://www.sqlite.org/index.html) |
+| ![git_Flask](https://github.com/pandenic/Shortcut_URL/assets/114985447/340e1027-f1e0-4d0b-a5b1-d2286e89fbd0) | [Flask](https://flask.palletsprojects.com/en/3.0.x/) |
+| ![git_SQLAlchemy](https://github.com/pandenic/Shortcut_URL/assets/114985447/3d49ecef-6014-4e87-8a39-8e3f62660a98) | [SQLAlchemy](https://www.sqlalchemy.org/) |
+| ![git_SQLite](https://github.com/pandenic/Shortcut_URL/assets/114985447/9305dc46-66c1-4e5a-a1e4-3167e676780a)| [SQLite](https://www.sqlite.org/index.html) |
 
 
 # Installation
