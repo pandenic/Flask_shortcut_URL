@@ -6,9 +6,8 @@ modules and can be reused independently.
 """
 import random
 
-from yacut.settings import SHORT_URL_GENERATOR_SEQUENCE
-
 from yacut.models import URLMap
+from yacut.settings import SHORT_URL_GENERATOR_SEQUENCE
 
 
 def get_unique_short_id(string_length: int) -> str:

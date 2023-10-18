@@ -4,12 +4,12 @@ from http import HTTPStatus
 from typing import Tuple
 
 from flask import Response, jsonify, request, url_for
-from yacut.settings import (API_URL, SHORT_URL_DEFAULT_LENGTH,
-                            SHORT_URL_REGEX_PATTERN, HTTPMethods)
 
 from yacut import app, db
 from yacut.error_handlers import ErrorMessages, InvalidAPIUsage
 from yacut.models import URLMap
+from yacut.settings import (API_URL, SHORT_URL_DEFAULT_LENGTH,
+                            SHORT_URL_REGEX_PATTERN, HTTPMethods)
 from yacut.utils import get_unique_short_id
 from yacut.views import index_view
 
