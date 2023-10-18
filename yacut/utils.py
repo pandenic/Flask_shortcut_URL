@@ -6,7 +6,7 @@ modules and can be reused independently.
 """
 import random
 
-from settings import SHORT_URL_GENERATOR_SEQUENCE
+from yacut.settings import SHORT_URL_GENERATOR_SEQUENCE
 
 from yacut.models import URLMap
 

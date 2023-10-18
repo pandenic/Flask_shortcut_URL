@@ -2,7 +2,7 @@
 from http import HTTPStatus
 
 from flask import Response, abort, flash, redirect, render_template, url_for
-from settings import INDEX_PAGE, SHORT_URL_DEFAULT_LENGTH, HTTPMethods
+from yacut.settings import INDEX_PAGE, SHORT_URL_DEFAULT_LENGTH, HTTPMethods
 
 from yacut import app, db
 from yacut.error_handlers import ErrorMessages

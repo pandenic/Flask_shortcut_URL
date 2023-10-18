@@ -1,7 +1,7 @@
 """Contains YaCut app model descriptions."""
 from datetime import datetime, timezone
 
-from settings import ORIGINAL_URL_MAX_LENGTH, SHORT_URL_MAX_LENGTH
+from yacut.settings import ORIGINAL_URL_MAX_LENGTH, SHORT_URL_MAX_LENGTH
 
 from yacut import db
 

@@ -4,8 +4,8 @@ from http import HTTPStatus
 from typing import Tuple
 
 from flask import Response, jsonify, request, url_for
-from settings import (API_URL, SHORT_URL_DEFAULT_LENGTH,
-                      SHORT_URL_REGEX_PATTERN, HTTPMethods)
+from yacut.settings import (API_URL, SHORT_URL_DEFAULT_LENGTH,
+                            SHORT_URL_REGEX_PATTERN, HTTPMethods)
 
 from yacut import app, db
 from yacut.error_handlers import ErrorMessages, InvalidAPIUsage

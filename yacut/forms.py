@@ -1,6 +1,6 @@
 """Contains forms descriptions for the YaCut app."""
 from flask_wtf import FlaskForm
-from settings import SHORT_URL_REGEX_PATTERN
+from yacut.settings import SHORT_URL_REGEX_PATTERN
 from wtforms import StringField, SubmitField, URLField
 from wtforms.validators import URL, DataRequired, Length, Optional, Regexp
 

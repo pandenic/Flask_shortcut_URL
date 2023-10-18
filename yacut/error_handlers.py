@@ -4,7 +4,7 @@ from http import HTTPStatus
 from typing import Tuple
 
 from flask import Response, jsonify, render_template
-from settings import SHORT_URL_MAX_LENGTH
+from yacut.settings import SHORT_URL_MAX_LENGTH
 
 from yacut import app, db
 
