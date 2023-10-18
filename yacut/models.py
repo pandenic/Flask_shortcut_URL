@@ -32,6 +32,6 @@ class URLMap(db.Model):
 
     def from_dict(self, data: dict) -> None:
         """Set fields of URLMap model object from dict."""
-        for field in ['original', 'short']:
+        for field in ('original', 'short'):
             if field in data:
                 setattr(self, field, data[field])

@@ -11,7 +11,7 @@ from yacut.models import URLMap
 from yacut.utils import get_unique_short_id
 
 
-@app.route('/', methods=[HTTPMethods.GET, HTTPMethods.POST])
+@app.route('/', methods=(HTTPMethods.GET, HTTPMethods.POST))
 def index_view() -> str:
     """Describe index page view."""
     form = URLMapForm()
@@ -39,12 +39,12 @@ def index_view() -> str:
     return render_template(INDEX_PAGE, form=form)
 
 
-@app.route('/<string:short_url>', methods=[HTTPMethods.GET])
+@app.route('/<string:short_url>', methods=(HTTPMethods.GET,))
 def redirect_view(short_url: str) -> Response:
     """Describe redirection to original URL from short URL."""
     if not short_url.lower().isalnum():
-        abort(404)
+        abort(HTTPStatus.NOT_FOUND)
     url_to_redirect = URLMap.query.filter_by(short=short_url).first()
     if not url_to_redirect:
-        abort(404)
+        abort(HTTPStatus.NOT_FOUND)
     return redirect(url_to_redirect.original, code=HTTPStatus.FOUND)

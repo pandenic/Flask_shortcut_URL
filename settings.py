@@ -1,5 +1,6 @@
 """Contains general settings for YaCut app."""
 import os
+import string
 from dataclasses import dataclass
 
 INDEX_PAGE = 'index.html'
@@ -9,6 +10,7 @@ ORIGINAL_URL_MAX_LENGTH = 256
 SHORT_URL_MAX_LENGTH = 16
 SHORT_URL_DEFAULT_LENGTH = 6
 SHORT_URL_REGEX_PATTERN = r'^[A-Za-z0-9]{0,16}$'
+SHORT_URL_GENERATOR_SEQUENCE = string.ascii_uppercase + string.ascii_lowercase + string.digits
 
 
 @dataclass

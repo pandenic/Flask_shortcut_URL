@@ -5,7 +5,8 @@ This functions can't be related to other
 modules and can be reused independently.
 """
 import random
-import string
+
+from settings import SHORT_URL_GENERATOR_SEQUENCE
 
 from yacut.models import URLMap
 
@@ -20,9 +21,7 @@ def get_unique_short_id(string_length: int) -> str:
     """
     while True:
         generated_url = ''.join(
-            random.choice(
-                string.ascii_uppercase + string.ascii_lowercase + string.digits,
-            )
+            random.choice(SHORT_URL_GENERATOR_SEQUENCE)
             for _ in range(string_length)
         )
         if not URLMap.query.filter_by(short=generated_url).first():

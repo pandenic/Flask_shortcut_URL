@@ -29,7 +29,7 @@ class ErrorMessages:
 class InvalidAPIUsage(Exception):
     """Describes exception for invalid API usage."""
 
-    status_code = 400
+    status_code = HTTPStatus.BAD_REQUEST
 
     def __init__(self, message: str, status_code: HTTPStatus = None) -> None:
         """Initialize InvalidAPIUsage class object."""
@@ -49,13 +49,13 @@ def invalid_api_usage(error) -> Tuple[Response, HTTPStatus]:
     return jsonify(error.to_dict()), error.status_code
 
 
-@app.errorhandler(404)
+@app.errorhandler(HTTPStatus.NOT_FOUND)
 def page_not_found(error) -> Tuple[str, HTTPStatus]:
     """Handle page not found exception."""
     return render_template('404.html'), HTTPStatus.NOT_FOUND
 
 
-@app.errorhandler(500)
+@app.errorhandler(HTTPStatus.INTERNAL_SERVER_ERROR)
 def internal_error(error) -> Tuple[str, HTTPStatus]:
     """Handle internal error exception."""
     db.session.rollback()
